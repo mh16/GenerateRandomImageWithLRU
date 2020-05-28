@@ -120,32 +120,10 @@ public class GeneratedListAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             moviePosterImageView = itemView.findViewById(R.id.image_view_show_card);
             moviePosterImageView.getLayoutParams().width =350;
 
-//            movieCard.setOnClickListener(view -> {
-//                Intent intent = new Intent(mContext, MovieInfoActivity.class);
-//
-//                Movies movies = mMovies.get(getAdapterPosition());
-//                intent.putExtra(Constants.MOVIE_ID, movies);
-//
-//                mContext.startActivity(intent);
-//            });
-
         }
 
         public void onBind(int position) {
             super.onBind(position);
-//            movieCard.setAnimation(
-//                    AnimationUtils.loadAnimation(mContext, R.anim.fade_transition_animation));
-
-            // TODO: Disabled caching. Backened will provied new url every time we re-ingest content
-            //https://expressplayteam.atlassian.net/browse/K21-1605
-//            Glide.with(mContext.getApplicationContext())
-//                    .load(mMovies.get(position).getImagePoster())
-//                    .asBitmap()
-//                    .centerCrop()
-//                    .diskCacheStrategy(DiskCacheStrategy.NONE)
-//                    .skipMemoryCache(true)
-//                    .placeholder(R.drawable.movie_place_holder)
-//                    .into(moviePosterImageView);
 
             Glide.with(mContext)
                     .load(mMovies.get(position))
